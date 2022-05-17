@@ -1,0 +1,10 @@
+.main {
+    margin-top: 1rem;
+}
+.space {
+    display: grid;
+}
+
+.space header {
+    margin-top: 1rem;
+}

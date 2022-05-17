@@ -1,0 +1,12 @@
+.form-box {
+    border-radius: 2rem;
+  }
+
+
+.form-box form {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    margin: 0 auto;
+  }
+ 

@@ -1,0 +1,13 @@
+.tasks-list {
+    list-style-type: none;
+    margin: 0 auto;
+    margin-top: 10rem;
+    padding: 1rem;
+    width: 90%;
+    max-width: 50rem;
+    display: block;
+    justify-content: center;
+    flex-wrap: wrap;
+    border-radius: 2rem;
+    background-color: #81767d;
+  }
