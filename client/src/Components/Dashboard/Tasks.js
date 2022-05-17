@@ -1,3 +1,4 @@
+import React from "react";
 import Task from "./Task.js";
 
 import './Tasks.css'
@@ -6,14 +7,14 @@ const TaskList = props => {
       <>
       <ul className="tasks-list">
         {props.items.map((task,key) => (
+          <div className={`inventory`}>
           <Task
           key={key}
           title={task.title}
-          option={task.option}
-          description={task.description}
-          completion={task.completion}
           />
+          </div>
         ))}
+      
       </ul>
       </>
       

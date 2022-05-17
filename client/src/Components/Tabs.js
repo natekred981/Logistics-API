@@ -12,10 +12,10 @@ import './Tabs.css';
 const ControlledTabs = () => {
     const [loadedTasks, setLoadedTasks] = useState();
     useEffect(() => {
-      const sendRequest = async () => {
-        const response = await fetch('http://localhost:4001/api/tasks/4');
+      const sendRequest = async () => { 
+        const response = await fetch('http://localhost:4002/api/tasks');
         const responseData  = await response.json();
-        setLoadedTasks(responseData.tasks);
+        setLoadedTasks(responseData.inventory);
       }
       sendRequest();
     }, [])
