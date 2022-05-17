@@ -1,7 +1,10 @@
 import mongoose from "mongoose";
 
+
 const postSchema = mongoose.Schema({
-    title: {type: String, required: true}
+    title: {type: String, required: true},
+    id: {type: String, required: true}
+    
 });
 
 const Inventory = mongoose.model('Inventory', postSchema);

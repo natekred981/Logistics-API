@@ -21,14 +21,14 @@ const ControlledTabs = () => {
     }, [])
     const [key, setKey] = useState('dashboard');
     const [showForm, setShowForm] = useState(false);
-
-
+    console.log(loadedTasks);
+    
     return (
       <>
       <div className="space">
       <header>
         <CreateButton onClick={() => setShowForm(true)}/>
-        <Modal onCancel={e => setShowForm(false)} show={showForm}/>
+        <Modal onCancel={e => setShowForm(false)}  show={showForm}/>
       </header>
           <div>
           {loadedTasks && <TaskList items={loadedTasks} />}
