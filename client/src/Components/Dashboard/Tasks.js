@@ -11,6 +11,7 @@ const TaskList = props => {
           <Task
           key={key}
           title={task.title}
+          {...props}
           />
           </div>
         ))}

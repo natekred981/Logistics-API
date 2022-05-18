@@ -9,7 +9,7 @@ const Task = (props) => {
       <Card>
         <div className="task-item_info">
           <h2>{props.title}</h2>
-          <button className="update">update</button>
+          <button className="update" onClick={props.onUpdate}>update</button>
         </div>
         </Card>
     </li>
