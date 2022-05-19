@@ -8,30 +8,8 @@ import ReactDOM from "react-dom";
 import { CSSTranstion } from 'react-transition-group'
 import Backdrop from "../../shared/components/Backdrop";
 import CreateTask from "./Form";
+import * as uuid from 'uuid';
 
-// const ModalOverlay = props => {
-
-//     const content = (
-//         <div className={`modal ${props.className}`} style={props.style} >
-//            <header className={`modal__header ${props.headerClass}`}>
-//                <h2>{props.header}</h2>
-//                </header> 
-//             <form
-//             onSubmit={props.onSubmit ? props.onSubmit : event => event.preventDefault()}
-//             >
-//                 <div className={`modal__content ${props.contentClass}`}>
-//                     {props.children}
-//                 </div>
-//                 <footer className={`modal__footer ${props.footerClass}`}>
-//                     {props.footer}
-//                 </footer>
-//             </form>
-//         </div>
-//     )
-
-//     return ReactDOM.createPortal(content, document.getElementById('modal-hook'));
-
-// };
 
 const UserModal = props => {
   const [title, setTitle] = useState("");
@@ -43,14 +21,12 @@ const UserModal = props => {
       headers: {
         'Content-Type': 'application/json'
       },
-      body: JSON.stringify({
-        title: title
-      }) 
+      body: JSON.stringify({title: title}) 
     });
 
     let responseData = await response.json();
 
-    console.log(responseData);
+    console.log(responseData.message._id);
     window.location.reload(false);
 
   }
